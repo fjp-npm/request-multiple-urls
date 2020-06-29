@@ -1,0 +1,47 @@
+{
+  "name": "request-multiple-urls",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc",
+    "tsc": "tsc --watch",
+    "lint": "eslint src/**/*.ts",
+    "fix": "eslint src/**/*.ts --fix",
+    "test": "jest --config jestconfig.json",
+    "tdd": "jest --watchAll --config jestconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run lint && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjp-npm/request-multiple-urls.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fjp-npm/request-multiple-urls/issues"
+  },
+  "homepage": "https://github.com/fjp-npm/request-multiple-urls#readme",
+  "devDependencies": {
+    "@types/jest": "26.0.3",
+    "@typescript-eslint/eslint-plugin": "3.4.0",
+    "@typescript-eslint/parser": "3.4.0",
+    "eslint": "7.3.1",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.22.0",
+    "jest": "26.1.0",
+    "ts-jest": "26.1.1",
+    "typescript": "3.9.5"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "description": "Package to fetch JSON data from a collection of url endpoints",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "keywords": [
+    "Placeholder"
+  ],
+  "author": "fjp"
+}
