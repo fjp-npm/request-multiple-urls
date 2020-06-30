@@ -7,7 +7,7 @@ import axios, {AxiosResponse} from 'axios';
  * @param urls Urls for endpoints where JSON data is expected to be returned
  * @returns JSON data from the url endpoints
  */
-export default async function requestMultipleUrls(urls: string[]): Promise<Object[]> {
+async function requestMultipleUrls(urls: string[]): Promise<Object[]> {
   return new Promise<Object[]>(async function (resolve, reject) {
     try {
       const result: Object[] = [];
@@ -28,5 +28,7 @@ export default async function requestMultipleUrls(urls: string[]): Promise<Objec
     }
   });
 }
+
+module.exports = requestMultipleUrls
 
 
