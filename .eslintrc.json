@@ -1,21 +1,28 @@
 {
-    "env": {
-        "browser": true,
-        "es2020": true,
-        "node": true,
-        "jest": true
-    },
-    "extends": [
-        "airbnb-base"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 11,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "@typescript-eslint"
-    ],
-    "rules": {
-    }
+  "env": {
+    "es2020": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "no-console": "off",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "message": "Unexpected property on console object was called",
+        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]"
+      }
+    ]
+  }
 }

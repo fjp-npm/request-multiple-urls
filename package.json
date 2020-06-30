@@ -1,28 +1,12 @@
 {
-  "name": "@fjp-npm/request-multiple-urls",
-  "version": "0.0.2",
-  "scripts": {
-    "build": "tsc",
-    "tsc": "tsc --watch",
-    "lint": "eslint src/**/*.ts",
-    "fix": "eslint src/**/*.ts --fix",
-    "test": "jest --config jestconfig.json",
-    "tdd": "jest --watchAll --config jestconfig.json",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run lint && git add -A src",
-    "postversion": "git push && git push --tags"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fjp-npm/request-multiple-urls.git"
-  },
-  "license": "MIT",
+  "author": "fjp@dodion.co.uk",
   "bugs": {
     "url": "https://github.com/fjp-npm/request-multiple-urls/issues"
   },
-  "homepage": "https://github.com/fjp-npm/request-multiple-urls#readme",
+  "dependencies": {
+    "axios": "0.19.2"
+  },
+  "description": "Package to fetch JSON data from a collection of url endpoints",
   "devDependencies": {
     "@types/jest": "26.0.3",
     "@typescript-eslint/eslint-plugin": "3.4.0",
@@ -32,16 +16,38 @@
     "eslint-plugin-import": "2.22.0",
     "jest": "26.1.0",
     "ts-jest": "26.1.1",
+    "typedoc": "0.17.7",
     "typescript": "3.9.5"
   },
   "files": [
     "lib/**/*"
   ],
-  "description": "Package to fetch JSON data from a collection of url endpoints",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "homepage": "https://github.com/fjp-npm/request-multiple-urls#readme",
   "keywords": [
-    "Placeholder"
+    "urls",
+    "json"
   ],
-  "author": "fjp"
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "@fjp-npm/request-multiple-urls",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjp-npm/request-multiple-urls.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "docs": "typedoc --entryPoint '\"index\"'",
+    "fix": "eslint src/**/*.ts --fix",
+    "lint": "eslint src/**/*.ts",
+    "postversion": "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "tdd": "jest --watchAll --config jestconfig.json",
+    "test": "jest --config jestconfig.json",
+    "tsc": "tsc --watch",
+    "version": "npm run lint && git add -A src"
+  },
+  "types": "lib/index.d.ts",
+  "version": "0.0.2"
 }

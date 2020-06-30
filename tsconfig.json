@@ -1,17 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "allowJs": true,
     "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
     "outDir": "./lib",
+    "skipLibCheck": true,
     "strict": true,
-    "allowJs": true
+    "target": "es5"
   },
+  "exclude": [
+    "node_modules",
+    "**/lib/*",
+    "**/__mocks__/*",
+    "**/__tests__/*"
+  ],
   "include": [
     "src"
   ],
-  "exclude": [
-    "node_modules",
-    "**/__tests__/*"
-  ]
+  "typedocOptions": {
+    "mode": "modules",
+    "out": "docs",
+    "readme": "./README.md"
+  }
 }
