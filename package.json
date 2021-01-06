@@ -4,7 +4,7 @@
     "url": "https://github.com/fjp-npm/request-multiple-urls/issues"
   },
   "dependencies": {
-    "axios": "0.19.2"
+    "axios": "0.21.1"
   },
   "description": "Package to fetch JSON data from a collection of url endpoints",
   "devDependencies": {
